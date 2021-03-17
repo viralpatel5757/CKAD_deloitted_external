@@ -16,12 +16,12 @@ spec:
         app: events-external
     spec:
       containers:
-      - image: drehnstrom/events-external:v1.0
+      - image: gcr.io/mar-roidtc321/external_image
         name: events-external
         imagePullPolicy: "Always"
         env:
         - name: SERVER
-          value: "http://events-internal"
+          value: "http://events-internal:8082"
         resources:
           requests:
             memory: "128Mi"
